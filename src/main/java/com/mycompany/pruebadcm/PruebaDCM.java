@@ -5,13 +5,30 @@
 
 package com.mycompany.pruebadcm;
 
+
+import com.mycompany.pruebadcm.cfind.Cfind;
+import java.io.IOException;
+import java.security.GeneralSecurityException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.dcm4che3.net.IncompatibleConnectionException;
 /**
  *
  * @author MH
  */
 public class PruebaDCM {
+    
+
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
+            System.out.println("Hello World!");
+            Cfind cfind = new Cfind();
+            cfind.localPartConecction();
+            cfind.createDeviceForConnection();
+            cfind.remotePartConnection();
+            cfind.setAssociationParameters();
+            cfind.startAssociation();
+        
     }
 }
